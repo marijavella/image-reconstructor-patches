@@ -150,19 +150,3 @@ def get_patches(GT, stride, patch_size):
     patches = np.asarray(hr_patches)
 
     return patches, im_h, im_w, n_channels
-
-GT = pil_image.open("Set14/baboon.bmp")
-GT = np.array(GT)
-
-stride = 18
-patch_size = 33
-patches, im_h, im_w, n_channels = get_patches(GT, stride, patch_size)
-
-reconstructedim = recon_im(patches, im_h, im_w, n_channels, stride, patch_size)
-
-if n_channels == 1:
-    plt.imshow(reconstructedim, cmap='gray')
-    plt.show()
-else:
-    plt.imshow(reconstructedim.astype(np.uint8))
-    plt.show()
