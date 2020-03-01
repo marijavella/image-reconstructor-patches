@@ -13,9 +13,9 @@ import PIL.Image as pil_image
 def demo(input_image, stride, patch_size):
     GT = np.array(pil_image.open(input_image))
     patches, im_h, im_w, n_channels = get_patches(GT, stride, patch_size)
-    #TODO: Add functionality to show a patches image or save it 
+    # TODO: Add functionality to show a patches image or save it
 
-    reconstructedim = recon_im(patches, im_h, im_w, n_channels, stride, patch_size)
+    reconstructedim = recon_im(patches, im_h, im_w, n_channels, stride)
 
     if n_channels == 1:
         plt.imshow(reconstructedim, cmap='gray')
@@ -24,6 +24,6 @@ def demo(input_image, stride, patch_size):
         plt.imshow(reconstructedim.astype(np.uint8))
         plt.show()
 
+
 if __name__ == '__main__':
     demo()
-
