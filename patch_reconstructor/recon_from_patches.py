@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def recon_im(patches: np.ndarray, im_h, im_w, n_channels, stride):
+def recon_im(patches: np.ndarray, im_h: int, im_w: int, n_channels: int, stride: int):
     """Reconstruct the image from all patches.
         Patches are assumed to be square and overlapping depending on the stride. The image is constructed
          by filling in the patches from left to right, top to bottom, averaging the overlapping parts.
