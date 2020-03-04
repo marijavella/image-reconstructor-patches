@@ -1,5 +1,6 @@
 Image Reconstructor (from Patches)
 ============================================================
+[![Build Status](https://travis-ci.org/marijavella/image-reconstructor-patches.svg?branch=master)](https://github.com/marijavella/image-reconstructor-patches)
 
 Python code to reconstruct images from patches with a specified patch size/stride combination.  The patches are combined by averaging, making this useful when reconstructing an image from imperfect patches generated from a neural network.  
 
