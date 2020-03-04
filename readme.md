@@ -1,7 +1,7 @@
 Image Reconstructor (from Patches)
 ============================================================
 
-Python code to reconstruct images from patches with a specified patch size/stride combination.  
+Python code to reconstruct images from patches with a specified patch size/stride combination.  The patches are combined by averaging, making this useful when reconstructing an image from imperfect patches generated from a neural network.  
 
 This code is more flexible than the [`Scikit`](https://scikit-learn.org/stable/) [`reconstruct_from_patches_2d`](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.image.reconstruct_from_patches_2d.html) function since it can work with any stride value.
 
@@ -49,9 +49,11 @@ Demo
 ----
 To execute a short demo run the following commands from the repo home directory:
 
-1. `pip install -r requirements.txt` (adds `pillow`, `click` and `matplotlib` for graphing functionalities)
+1. `pip install -r requirements.txt` (adds [`pillow`](https://pillow.readthedocs.io/en/stable/), [`click`](https://click.palletsprojects.com/en/7.x/) and [`matplotlib`](https://matplotlib.org) for graphing functionalities)
 2. `pip install .`
 2. `python demo.py samples/baboon.bmp`
+
+The demo will produce an image showing the patching and reconstruction process.  The image, stride and patch size can be adjusted as required.
 
 Further Development
 -------------------
